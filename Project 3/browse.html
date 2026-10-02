@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus ShareShelf | Browse</title>
+
+    <!-- css for this page starts after comment "browse item page" -->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <!-- header of the website -->
+
+    <header class="site-header">
+
+        <a class="logo" href="index.html">
+
+            <span class="logo-icon">
+                <img src="icons/logo.png" alt="app logo">
+            </span>
+
+            <span>Campus ShareShelf</span>
+
+        </a>
+
+
+        <!-- search moved to header for the project 3 requirement -->
+
+        <form class="header-search" action="searchResults.html" method="get">
+
+            <label class="search-only" for="header-search">
+                Search items
+            </label>
+
+            <input
+                type="search"
+                id="header-search"
+                name="search"
+                placeholder="Try vacuum"
+                required>
+
+            <button type="submit">
+                Search
+            </button>
+
+        </form>
+
+
+        <div class="student-profile">
+
+            <span class="profile-icon">
+                <img src="icons/user.svg" alt="user profile icon">
+            </span>
+
+            <span>VT User Name</span>
+
+        </div>
+
+    </header>
+
+
+    <div class="page-layout">
+
+        <!-- left navigation pane -->
+
+        <nav class="sidebar">
+
+            <ul>
+
+                <li>
+
+                    <a href="index.html">
+
+                        <span class="navigation-icon">
+                            <img src="icons/homepage.svg" alt="homepage icon">
+                        </span>
+
+                        <span>Home</span>
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a class="active" href="browse.html">
+
+                        <span class="navigation-icon">
+                            <img src="icons/browse.svg" alt="browse items icon">
+                        </span>
+
+                        <span>Browse</span>
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="my-items.html">
+
+                        <span class="navigation-icon">
+                            <img src="icons/my_items.svg" alt="my items icon">
+                        </span>
+
+                        <span>My Items</span>
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="requests.html">
+
+                        <span class="navigation-icon">
+                            <img src="icons/requests.svg" alt="requests icon">
+                        </span>
+
+                        <span>Requests</span>
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="settings.html">
+
+                        <span class="navigation-icon">
+                            <img src="icons/settings.svg" alt="settings icon">
+                        </span>
+
+                        <span>Settings</span>
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- browse main page -->
+
+        <main class="browse-main">
+
+            <section class="browse-heading">
+
+                <h1>Browse Items</h1>
+
+            </section>
+
+
+            <!-- filters and sorting -->
+
+            <section class="browse-tools">
+
+                <form class="browse-form" action="" method="get">
+
+                    <div class="filter-row">
+
+                        <div class="filter-option">
+
+                            <label for="category">
+                                Category
+                            </label>
+
+                            <select id="category" name="category">
+
+                                <option value="">
+                                    All Categories
+                                </option>
+
+                                <option value="electronics">
+                                    Electronics
+                                </option>
+
+                                <option value="tools">
+                                    Tools
+                                </option>
+
+                                <option value="automotive">
+                                    Automotive
+                                </option>
+
+                                <option value="home">
+                                    Home Essentials
+                                </option>
+
+                                <option value="school">
+                                    School Supplies
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="filter-option">
+
+                            <label for="status">
+                                Status
+                            </label>
+
+                            <select id="status" name="status">
+
+                                <option value="">
+                                    All Statuses
+                                </option>
+
+                                <option value="available">
+                                    Available
+                                </option>
+
+                                <option value="borrowed">
+                                    Borrowed
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="filter-option">
+
+                            <label for="owner">
+                                Owner
+                            </label>
+
+                            <select id="owner" name="owner">
+
+                                <option value="">
+                                    Any Owner
+                                </option>
+
+                                <option value="nearby">
+                                    Nearby Students
+                                </option>
+
+                                <option value="verified">
+                                    Verified Students
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="filter-option">
+
+                            <label for="sort">
+                                Sort By
+                            </label>
+
+                            <select id="sort" name="sort">
+
+                                <option value="nearby">
+                                    Nearest First
+                                </option>
+
+                                <option value="newest">
+                                    Newest First
+                                </option>
+
+                                <option value="name">
+                                    Item Name
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="filter-button">
+
+                            Apply Filters
+
+                        </button>
+
+
+                        <button
+                            type="reset"
+                            class="reset-button">
+
+                            Reset Filters
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- list of available campus items -->
+
+            <section class="browse-results">
+
+                <h2 class="sr-only">
+                    Browse results
+                </h2>
+
+
+                <!-- car tyre inflator -->
+
+                <article class="browse-item">
+
+                    <img
+                        class="browse-item-image"
+                        src="images/inflator.jpg"
+                        alt="Portable car tyre inflator">
+
+                    <div class="browse-item-main">
+
+                        <h2>
+                            Car Tyre Inflator
+                        </h2>
+
+                        <p class="item-brand">
+                            Brand: Nexpow
+                        </p>
+
+                    </div>
+
+
+                    <div class="browse-item-details">
+
+                        <p>
+                            <strong>Owned By:</strong>
+                            Taylor
+                        </p>
+
+                        <p>
+                            <strong>Category:</strong>
+                            Automotive
+                        </p>
+
+                    </div>
+
+
+                    <span class="status available">
+                        Available
+                    </span>
+
+
+                    <a
+                        class="browse-arrow"
+                        href="itemDetailsAlternate.html">
+
+                        ›
+
+                    </a>
+
+                </article>
+
+
+                <!-- vacuum -->
+
+                <article class="browse-item">
+
+                    <img
+                        class="browse-item-image"
+                        src="images/vacuum.jpg"
+                        alt="Portable vacuum cleaner">
+
+                    <div class="browse-item-main">
+
+                        <h2>
+                            Vacuum
+                        </h2>
+
+                        <p class="item-brand">
+                            Brand: Shark
+                        </p>
+
+                    </div>
+
+
+                    <div class="browse-item-details">
+
+                        <p>
+                            <strong>Owned By:</strong>
+                            Morgan
+                        </p>
+
+                        <p>
+                            <strong>Category:</strong>
+                            Home Essentials
+                        </p>
+
+                    </div>
+
+
+                    <span class="status available">
+                        Available
+                    </span>
+
+
+                    <a
+                        class="browse-arrow"
+                        href="itemDetailsAlternate.html">
+
+                        ›
+
+                    </a>
+
+                </article>
+
+
+                <!-- calculator -->
+
+                <article class="browse-item">
+
+                    <img
+                        class="browse-item-image"
+                        src="images/calculator.jpg"
+                        alt="Scientific calculator">
+
+                    <div class="browse-item-main">
+
+                        <h2>
+                            Calculator
+                        </h2>
+
+                        <p class="item-brand">
+                            Brand: Casio
+                        </p>
+
+                    </div>
+
+
+                    <div class="browse-item-details">
+
+                        <p>
+                            <strong>Currently With:</strong>
+                            Jordan
+                        </p>
+
+                        <p>
+                            <strong>Category:</strong>
+                            Electronics
+                        </p>
+
+                    </div>
+
+
+                    <span class="status borrowed">
+                        Borrowed
+                    </span>
+
+
+                    <a
+                        class="browse-arrow"
+                        href="itemDetail.html">
+
+                        ›
+
+                    </a>
+
+                </article>
+
+
+                <!-- speaker -->
+
+                <article class="browse-item">
+
+                    <img
+                        class="browse-item-image"
+                        src="images/speaker.jpg"
+                        alt="Portable Bluetooth speaker">
+
+                    <div class="browse-item-main">
+
+                        <h2>
+                            Speaker
+                        </h2>
+
+                        <p class="item-brand">
+                            Brand: JBL
+                        </p>
+
+                    </div>
+
+
+                    <div class="browse-item-details">
+
+                        <p>
+                            <strong>Currently With:</strong>
+                            Sam
+                        </p>
+
+                        <p>
+                            <strong>Category:</strong>
+                            Electronics
+                        </p>
+
+                    </div>
+
+
+                    <span class="status borrowed">
+                        Borrowed
+                    </span>
+
+
+                    <a
+                        class="browse-arrow"
+                        href="itemDetail.html">
+
+                        ›
+
+                    </a>
+
+                </article>
+
+
+                <!-- toolkit -->
+
+                <article class="browse-item">
+
+                    <img
+                        class="browse-item-image"
+                        src="images/toolkit.jpg"
+                        alt="Home repair toolkit">
+
+                    <div class="browse-item-main">
+
+                        <h2>
+                            Toolkit
+                        </h2>
+
+                        <p class="item-brand">
+                            Brand: Bosch
+                        </p>
+
+                    </div>
+
+
+                    <div class="browse-item-details">
+
+                        <p>
+                            <strong>Owned By:</strong>
+                            Alex
+                        </p>
+
+                        <p>
+                            <strong>Category:</strong>
+                            Tools
+                        </p>
+
+                    </div>
+
+
+                    <span class="status available">
+                        Available
+                    </span>
+
+
+                    <a
+                        class="browse-arrow"
+                        href="itemDetailsAlternate.html">
+
+                        ›
+
+                    </a>
+
+                </article>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- footer of the website -->
+
+    <footer>
+
+        <p>
+
+            Campus ShareShelf |
+
+            <a href="">
+                About
+            </a> |
+
+            <a href="">
+                Privacy
+            </a> |
+
+            <a href="">
+                Contact
+            </a> |
+
+            &copy; 2026
+
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

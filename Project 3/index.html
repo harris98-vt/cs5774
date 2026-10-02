@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus ShareShelf | Home</title>
+
+    <!-- css for this page starts at the top-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- header of the web app -->
+    <header class="site-header">
+
+        <a class="logo" href="index.html">
+            <span class="logo-icon">
+                <img src="icons/logo.png" alt="app logo"> 
+            </span>
+            <span>Campus ShareShelf</span>
+        </a>
+
+        
+        <div class="student-profile">
+            <span class="profile-icon">
+                <img src="icons/user.svg" alt="user profile icon">  
+            </span>
+            <span>VT User Name</span>
+        </div>
+
+    </header>
+
+
+    <div class="page-layout">
+
+        <!-- left navigation pane -->
+        <nav class="sidebar">
+
+            <ul>
+                <li>
+                    <a class="active" href="index.html">
+                        <span class="navigation-icon">
+                            <img src="icons/homepage.svg" alt="homepage icon">  
+                        </span>
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="browse.html">
+                        <span class="navigation-icon">
+                            <img src="icons/browse.svg" alt="browse items icon">  
+                        </span>
+                        <span>Browse</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="my-items.html">
+                        <span class="navigation-icon">
+                            <img src="icons/my_items.svg" alt="my items icon">  
+                        </span>
+                        <span>My Items</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="requests.html">
+                        <span class="navigation-icon">
+                            <img src="icons/requests.svg"  alt="requests icon">  
+                        </span>
+                        <span>Requests</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="settings.html">
+                        <span class="navigation-icon">
+                            <img src="icons/settings.svg" alt="settings icon">  
+                        </span>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+
+        <!-- main content of the homepagee-->
+        <main>
+
+            <section class="welcome-section">
+
+                
+                <h1>Welcome VT Student!</h1>
+
+                <p>
+                    Borrow useful items from students around campus or lend something
+                    you already own to help another student.
+                </p>
+
+            </section>
+
+
+            <!-- quick dashboard of important items for user -->
+            <section class="stats-section">
+
+                <article class="stat-card">
+                    <strong>12</strong>
+                    <h2>Available Items</h2>
+                    <p>Items currently available nearby to borrow.</p>
+                </article>
+
+                <article class="stat-card">
+                    <strong>8</strong>
+                    <h2>Open Requests</h2>
+                    <p>Items students are currently looking to borrow.</p>
+                </article>
+
+                <article class="stat-card">
+                    <strong>3</strong>
+                    <h2>Borrowed by Me</h2>
+                    <p>Items you are currently borrowing.</p>
+                </article>
+
+                <article class="stat-card">
+                    <strong>2</strong>
+                    <h2>Lent by Me</h2>
+                    <p>Your items currently borrowed by other students.</p>
+                </article>
+
+            </section>
+
+
+            <!-- borrowing items section-->
+            <section class="content-section">
+
+                <div class="section-heading">
+                    <h2>Popular Around Campus</h2>
+                    <a href="browse.html">View All</a>
+                </div>
+
+
+                <div class="popular-grid">
+
+                    <article class="item-card">
+
+                        <!-- most of images used on this page are free from unsplash: unsplash.com -->
+                        <img
+                            src="images/calculator.jpg"
+                            alt="Calculator available to borrow">
+
+                        <h3>Calculator</h3>
+
+                        <a class="borrow-arrow"  href="itemDetails.html">›</a>
+
+                    </article>
+
+
+                    <article class="item-card">
+
+                        
+                        <img
+                            src="images/toolkit.jpg"
+                            alt="Toolkit available to borrow">
+
+                        <h3>Toolkit</h3>
+
+                        <a class="borrow-arrow" href="itemDetails.html">›</a>
+
+                    </article>
+
+
+                    <article class="item-card">
+
+                        
+                        <img
+                            src="images/vacuum.jpg"
+                            alt="Vacuum available to borrow">
+
+                        <h3>Vacuum</h3>
+
+                        <a class="borrow-arrow" href="itemDetails.html">›</a>
+
+                    </article>
+
+
+                    <article class="item-card">
+
+                        
+                        <img
+                            src="images/speaker.jpg"
+                            alt="Portable speaker available to borrow">
+
+                        <h3>Speaker</h3>
+
+                        <a class="borrow-arrow" href="itemDetails.html">›</a>
+
+                    </article>
+
+
+                    <article class="item-card">
+
+                        
+                        <img
+                            src="images/projector.jpg"
+                            alt="Projector available to borrow">
+
+                        <h3>Projector</h3>
+
+                        <a class="borrow-arrow" href="itemDetails.html">›</a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- requests from other student -->
+            <section class="content-section">
+
+                <div class="section-heading">
+                    <h2>Students Also Looking For</h2>
+
+                    <a href="requests.html">View All</a>
+                </div>
+
+
+                <div class="request-grid">
+
+                    <article class="request-card">
+
+                        <div class="request-icon">
+                            <img
+                            src="images/screwdriver.jpg"
+                            alt="screwdriver needed">
+                        </div>
+
+                        <div class="request-info">
+
+                            
+                            <h3>Alex is looking for a screwdriver</h3>
+
+                            <p>
+                                <strong>Location:</strong>
+                                Residence Hall
+                            </p>
+
+                            <p>
+                                <strong>Needed By:</strong>
+                                September 10, 2026
+                            </p>
+
+                            <p>
+                                <strong>Expected Return:</strong>
+                                Same Day
+                            </p>
+
+                        </div>
+
+                        <a class="request-arrow" href="requests.html">›</a>
+
+                    </article>
+
+
+                    <article class="request-card">
+
+                        <div class="request-icon" >
+                            <img
+                            src="images/heater.jpg"
+                            alt="heater needed">
+                        </div>
+
+                        <div class="request-info">
+
+                            <h3>Jordan is looking for a heater</h3>
+
+                            <p>
+                                <strong>Location:</strong>
+                                Main Hall
+                            </p>
+
+                            <p>
+                                <strong>Needed By:</strong>
+                                September 12, 2026
+                            </p>
+
+                            <p>
+                                <strong>Expected Return:</strong>
+                                September 13, 2026
+                            </p>
+
+                        </div>
+
+                        <a class="request-arrow" href="requests.html">›</a>
+
+                    </article>
+
+                    <article class="request-card">
+
+                        <div class="request-icon" >
+                            <img
+                            src="images/whiteboard.jpg"
+                            alt="whiteboard needed">
+                        </div>
+
+                        <div class="request-info">
+
+                            
+                            <h3>Alex is looking for a whiteboard</h3>
+
+                            <p>
+                                <strong>Location:</strong>
+                                Main Hall
+                            </p>
+
+                            <p>
+                                <strong>Needed By:</strong>
+                                September 2, 2026
+                            </p>
+
+                            <p>
+                                <strong>Expected Return:</strong>
+                                September 27, 2026
+                            </p>
+
+                        </div>
+
+                        <a class="request-arrow" href="requests.html">›</a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- footer of the website -->
+    <footer>
+
+        <p>
+            Campus ShareShelf |
+            <a href="">About</a> |
+            <a href="">Privacy</a> |
+            <a href="">Contact</a> |
+            &copy; 2026
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

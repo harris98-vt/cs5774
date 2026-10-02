@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus ShareShelf | Add New Item</title>
+
+    <!-- css for this page starts after "add item page" -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- header of the website -->
+    <header class="site-header">
+
+        <a class="logo" href="index.html">
+
+            <span class="logo-icon">
+                <img src="icons/logo.png" alt="app logo">
+            </span>
+
+            <span>Campus ShareShelf</span>
+
+        </a>
+
+
+        <div class="student-profile">
+
+            <span class="profile-icon">
+                <img src="icons/user.svg" alt="user profile icon">
+            </span>
+
+            <span>VT User Name</span>
+
+        </div>
+
+    </header>
+
+
+    <div class="page-layout">
+
+        <!-- left navigation panee -->
+        <nav class="sidebar">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+
+                        <span class="navigation-icon">
+                            <img src="icons/homepage.svg" alt="homepage icon">
+                        </span>
+
+                        <span>Home</span>
+
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="browse.html">
+
+                        <span class="navigation-icon">
+                            <img src="icons/browse.svg" alt="browse items icon">
+                        </span>
+
+                        <span>Browse</span>
+
+                    </a>
+                </li>
+
+
+                <li>
+                    <a class="active" href="my-items.html">
+
+                        <span class="navigation-icon">
+                            <img src="icons/my_items.svg" alt="my items icon">
+                        </span>
+
+                        <span>My Items</span>
+
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="requests.html">
+
+                        <span class="navigation-icon">
+                            <img src="icons/requests.svg" alt="requests icon">
+                        </span>
+
+                        <span>Requests</span>
+
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="settings.html">
+
+                        <span class="navigation-icon">
+                            <img src="icons/settings.svg" alt="settings icon">
+                        </span>
+
+                        <span>Settings</span>
+
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- add item main page -->
+        <main class="add-item-main">
+
+            <div class="add-item-back">
+
+                <a href="my-items.html">
+                    &lt; Back to my items
+                </a>
+
+            </div>
+
+
+            <section class="add-item-heading">
+
+                <h1>Add New Item</h1>
+
+                <p>
+                    Add an item you are willing to lend to another student.
+                </p>
+
+            </section>
+
+
+            
+            <form class="add-item-form" action="" method="post">
+
+                
+                <div class="photo-upload-area">
+
+                    <label for="item-photo" class="photo-upload-label">
+
+                        <span class="photo-icon">＋</span>
+
+                        <strong>Add Photos</strong>
+
+                        <span>
+                            Drag and drop or click to upload
+                        </span>
+
+                    </label>
+
+                    <input
+                        type="file"
+                        id="item-photo"
+                        name="item-photo"
+                        accept="image/*">
+
+                </div>
+
+
+                
+                <div class="item-form-fields">
+
+                    <div class="form-row">
+
+                        <label for="item-name">
+                            Item Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="item-name"
+                            name="item-name"
+                            placeholder="e.g. Scientific calculator"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <label for="brand">
+                            Brand *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="brand"
+                            name="brand"
+                            placeholder="e.g. Casio"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <label for="item-category">
+                            Category *
+                        </label>
+
+                        <select
+                            id="item-category"
+                            name="item-category"
+                            required>
+
+                            <option value="">
+                                Select a category
+                            </option>
+
+                            <option value="electronics">
+                                Electronics
+                            </option>
+
+                            <option value="tools">
+                                Tools
+                            </option>
+
+                            <option value="home">
+                                Home Essentials
+                            </option>
+
+                            <option value="automotive">
+                                Automotive
+                            </option>
+
+                            <option value="school">
+                                School Supplies
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <label for="pickup-area">
+                            Pickup Area *
+                        </label>
+
+                        <select
+                            id="pickup-area"
+                            name="pickup-area"
+                            required>
+
+                            <option value="">
+                                Select a pickup area
+                            </option>
+
+                            <option value="library">
+                                Newman Library
+                            </option>
+
+                            <option value="main-hall">
+                                Main Hall
+                            </option>
+
+                            <option value="student-center">
+                                Student Center
+                            </option>
+
+                            <option value="residence-hall">
+                                Residence Hall
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <label for="borrow-permission">
+                            Who can Borrow *
+                        </label>
+
+                        <select
+                            id="borrow-permission"
+                            name="borrow-permission"
+                            required>
+
+                            <option value="">
+                                Select who can borrow
+                            </option>
+
+                            <option value="all">
+                                Any nearby college student
+                            </option>
+
+                            <option value="specific">
+                                Specific students only
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-row textarea-row">
+
+                        <label for="item-description">
+                            Description *
+                        </label>
+
+                        <textarea
+                            id="item-description"
+                            name="item-description"
+                            rows="5"
+                            placeholder="Describe the item and anything the borrower should know"
+                            required></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <!-- create and cancel buttons
+                  -->
+                <div class="add-item-actions">
+
+                    <button
+                        type="submit"
+                        class="create-item-button">
+                        Create New Item
+                    </button>
+
+                    <a
+                        href="my-items.html"
+                        class="cancel-item-button">
+                        Cancel
+                    </a>
+
+                </div>
+
+            </form>
+
+        </main>
+
+    </div>
+
+
+    <!-- footer of website -->
+    <footer>
+
+        <p>
+            Campus ShareShelf |
+            <a href="">About</a> |
+            <a href="">Privacy</a> |
+            <a href="">Contact</a> |
+            &copy; 2026
+        </p>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="addInteractions.js"></script>
+
+</body>
+
+</html>

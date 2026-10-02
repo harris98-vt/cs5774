@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus ShareShelf | Search Results</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <!-- header of the website -->
+
+    <header class="site-header">
+
+        <a class="logo" href="index.html">
+
+            <span class="logo-icon">
+                <img src="icons/logo.png" alt="app logo">
+            </span>
+
+            <span>Campus ShareShelf</span>
+
+        </a>
+
+
+        <!-- search fornm in the header for the project 3-->
+
+        <form class="header-search" action="searchResults.html" method="get">
+
+            <label class="search-only" for="header-search">
+                Search items
+            </label>
+
+            <input
+                type="search"
+                id="header-search"
+                name="search"
+                placeholder="Try vacuum"
+                required>
+
+            <button type="submit">
+                Search
+            </button>
+
+        </form>
+
+
+        <div class="student-profile">
+
+            <span class="profile-icon">
+                <img src="icons/user.svg" alt="user profile icon">
+            </span>
+
+            <span>VT User Name</span>
+
+        </div>
+
+    </header>
+
+
+    <div class="page-layout">
+
+        <!-- left navigation pane -->
+
+        <nav class="sidebar">
+
+            <ul>
+
+                <li>
+
+                    <a href="index.html">
+
+                        <span class="navigation-icon">
+                            <img src="icons/homepage.svg" alt="homepage icon">
+                        </span>
+
+                        <span>Home</span>
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a class="active" href="browse.html">
+
+                        <span class="navigation-icon">
+                            <img src="icons/browse.svg" alt="browse items icon">
+                        </span>
+
+                        <span>Browse</span>
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="my-items.html">
+
+                        <span class="navigation-icon">
+                            <img src="icons/my_items.svg" alt="my items icon">
+                        </span>
+
+                        <span>My Items</span>
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="requests.html">
+
+                        <span class="navigation-icon">
+                            <img src="icons/requests.svg" alt="requests icon">
+                        </span>
+
+                        <span>Requests</span>
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="settings.html">
+
+                        <span class="navigation-icon">
+                            <img src="icons/settings.svg" alt="settings icon">
+                        </span>
+
+                        <span>Settings</span>
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- search results main page -->
+
+        <main class="search-results-main">
+
+            <section class="search-results-heading">
+
+                <h1>Search Results</h1>
+
+                <p id="search-message">
+                    Search results will appear here
+                </p>
+
+            </section>
+
+
+            <!-- javascript to add the results of the search -->
+
+            <section id="search-results">
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- footer of the website-->
+
+    <footer>
+
+        <p>
+
+            Campus ShareShelf |
+
+            <a href="">
+                About
+            </a> |
+
+            <a href="">
+                Privacy
+            </a> |
+
+            <a href="">
+                Contact
+            </a> |
+
+            &copy; 2026
+
+        </p>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="searchScript.js"></script>
+
+</body>
+
+</html>
